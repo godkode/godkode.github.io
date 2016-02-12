@@ -19,7 +19,7 @@
 		<!-- Trying jQuery js load -->
 		<script>
         $(function () {
-            $('#nav-link a').on('click', function (e) {
+            $('#nav-link li a').on('click', function (e) {
                 e.preventDefault();
                 var page = $(this).attr('href');
                 $('#content').load(page);
