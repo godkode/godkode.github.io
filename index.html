@@ -18,6 +18,12 @@
 
 		<!-- Trying jQuery js load -->
 		<script>
+        $(document).ready(function(){
+        	$('#content').load('contentEvents.html', function(){
+        		$(this).show();
+        	});
+        });
+        
         $(function () {
             $('#nav-link li a').on('click', function (e) {
                 e.preventDefault();
