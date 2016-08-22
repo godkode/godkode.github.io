@@ -13,29 +13,35 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+		<!-- jQuery v2.2.4 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script
+			  src="https://code.jquery.com/jquery-2.2.4.js"
+			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			  crossorigin="anonymous"></script>
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- My Own Scripts -->
+		<script src="js/godkode.js"></script>
+		<!-- <script src="js/EventFileReader.js"></script> -->
+
 	</head>
-	<body>
+	<body onload="checkFileAPI()">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-ls-12">
 					<H2><center>Fall 2016 Future Events</center></H2>
 				</div>
 			</div>
-			<div class="row"> <!-- First Row -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 borderMeTop">
-					<H4>Security By Henrik</H4>
-					<ul>
-						<li><b>Dato: </b> 22 Nov </li>
-						<li><b>Room: </b> Don't know yet </li>
-						<li><b>Who: </b> Henrik Kramshøj </li>
-						<li><b>Invited: </b> All </li>
-						<li><b><u>Description</u>:</b> </li>
-						Something about security
-					</ul>
-				</div>
+			<div id="contentID">
+				
 			</div>
 		</div>
+		<script>
+			displayContent();
+		</script>
+
 	</body>
 </html>
