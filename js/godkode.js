@@ -35,7 +35,7 @@ function htmlReturn(txt) {
 	var title = "<H4><center>" + txt[2] + "</center></H4>";
 
 	var status = "<ul><li><b>Status: </b>" + txt[1] + "</li>"; 
-	var time = "<li><b>Date: </b>" + txt[4] + "</li>";
+	var time = "<li><b>Date: </b>" + txt[0] + "</li>";
 	var room = "<li><b>Room:</b>" + txt[6] + "</li>";
 	var who = "<li><b>Who:</b> " + txt[7] + "</li>"; 
 		
@@ -53,7 +53,7 @@ function htmlReturn(txt) {
 	valueReturn += "</ul>";
 	valueReturn += "</div>";
 
-  	// Html buils DONE 
+  	// Html build DONE 
   	countCell++;
   	return valueReturn;
 }
@@ -101,7 +101,7 @@ function readSheet() {
             
             var dataHolderArray = [];
             var counterArrat = 0;
-            var date = entry[i].gsx$_cokwr.$t + " " + entry[i].gsx$_cpzh4.$t;
+            var date = entry[i].gsx$day.$t + " " + entry[i].gsx$info.$t;
             dataHolderArray[counterArrat] = date;
             counterArrat++;
 
@@ -109,45 +109,50 @@ function readSheet() {
 			// i = 4
 
             // status
-            dataHolderArray[counterArrat] = isData(entry[i].gsx$_cpzh4);
+            dataHolderArray[counterArrat] = isData(entry[i].gsx$info);
             counterArrat++;
 
             // title
-            dataHolderArray[counterArrat] = isData(entry[i].gsx$_chk2m);
+            dataHolderArray[counterArrat] = isData(entry[i].gsx$title);
             counterArrat++;
-
-            //var title = entry[i].gsx$_chk2m.$t;
             
             // description;
-            dataHolderArray[counterArrat] = isData(entry[i].gsx$_ciyn3);
+            dataHolderArray[counterArrat] = isData(entry[i].gsx$description);
             counterArrat++;
 
+            i++;
+            // i = 5
+
             // time
-            dataHolderArray[counterArrat] = isData(entry[i].gsx$_cx0b9);
+            dataHolderArray[counterArrat] = isData(entry[i].gsx$info);
             counterArrat++;
             //var time = entry[i].gsx$_cx0b9.$t;
-            i += 2;
+            i++;
             // i = 6
 
             // invite
-            dataHolderArray[counterArrat] = isData(entry[i].gsx$_cpzh4);
+            dataHolderArray[counterArrat] = isData(entry[i].gsx$info);
             counterArrat++;
 
             //var invite = entry[i].gsx$_cpzh4.$t;
             i++;
 			// i = 7
+
             // room
-            dataHolderArray[counterArrat] = isData(entry[i].gsx$_cpzh4);
+            dataHolderArray[counterArrat] = isData(entry[i].gsx$info);
             counterArrat++;
 
             i++;
             // i = 8
+
             // company/who
-            dataHolderArray[counterArrat] = isData(entry[i].gsx$_cpzh4);
+            dataHolderArray[counterArrat] = isData(entry[i].gsx$info);
                       
             i += 2;
             // i = 10
+            console.log("dHA: " + dataHolderArray)
             getValue(dataHolderArray);
+
         } // i = 11
 
         //console.log(dataHolderOfArrays);
