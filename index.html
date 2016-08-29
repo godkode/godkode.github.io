@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>godKode - Better studies</title>
@@ -13,26 +13,22 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
 		
 		<!-- jQuery v2.2.4 -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+		</script>
 		<script
 			  src="https://code.jquery.com/jquery-2.2.4.js"
 			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-			  crossorigin="anonymous"></script>
+			  crossorigin="anonymous">	  	
+		</script>
 
-		<!-- Trying jQuery js load -->
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+		</script>
+		
 		<script>
-        /*$(document).ready(function(){
-        	$('#content').load('contentEvents.html', function(){
-        		$(this).show();
-        	});
-        });*/
-        
+        // Trying jQuery js load
         $(function () {
             $('#nav-link li a').on('click', function (e) {
                 e.preventDefault();
@@ -63,6 +59,19 @@
 			</nav>
 		</div>
 		<div id="content">
+			<script>
+			var spreadsheetId = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY",
+			    url = "https://spreadsheets.google.com/feeds/list/" +
+	        	spreadsheetId +
+	          	"/od6/public/values?alt=json";
+
+				$.get({
+				  url: url,
+				  success: function(response) {
+				    console.log(response);
+				  }
+				});
+			</script>
 		</div>
 	</body>
 </html>
