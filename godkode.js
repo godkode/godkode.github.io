@@ -72,11 +72,11 @@ function getValue(event) {
 	if (countCell > 2 && countCell % 3 == 2) {
 		// End Row
 		divEL.innerHTML += "</div>";
-		console.log("End row");
+		//console.log("End row");
 	} else if (countCell == 2) {
 		// End Row
 		divEL.innerHTML += "</div>";
-		console.log("End row");
+		//console.log("End row");
 	}
 }
 
@@ -101,6 +101,7 @@ function readSheet() {
             
             var dataHolderArray = [];
             var counterArrat = 0;
+            
             var date = entry[i].gsx$day.$t + " " + entry[i].gsx$info.$t;
             dataHolderArray[counterArrat] = date;
             counterArrat++;
