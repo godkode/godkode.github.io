@@ -32,16 +32,16 @@ function htmlReturn(txt) {
 	// This is the Div of the coloum.. :)
 	valueReturn += "<div class='col-xs-12 col-sm-6 col-md-4 col-lg-4 borderMeTop'>";
 
-	var title = "<H4><center>" + txt[2] + "</center></H4>";
+	var title = "<H4>" + txt[2] + "</H4>";
 
 	var status = "<ul><li><b>Status: </b>" + txt[1] + "</li>"; 
 	var time = "<li><b>Date: </b>" + txt[0] + "</li>";
-	var room = "<li><b>Room:</b>" + txt[6] + "</li>";
-	var who = "<li><b>Who:</b> " + txt[7] + "</li>"; 
+	var room = "<li><b>Room: </b>" + txt[6] + "</li>";
+	var who = "<li><b>Who: </b> " + txt[7] + "</li>"; 
 		
-	var invited = "<li><b>Invited:</b> " + txt[5] + "</li>";
+	var invited = "<li><b>Invited: </b> " + txt[5] + "</li>";
 
-	var description = "<b><li>Description: </b></li><br>" + txt[3];
+	var description = "<li><b>Description: </b></li>" + txt[3];
 
 	valueReturn += 	title + "" +
 					status + "" +
