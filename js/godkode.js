@@ -32,16 +32,16 @@ function htmlReturn(txt) {
 	// This is the Div of the coloum.. :)
 	valueReturn += "<div class='col-xs-12 col-sm-6 col-md-4 col-lg-4 borderMeTop'>";
 
-	var title = "<H4><center>" + txt[2] + "</center></H4>";
+	var title = "<H4>" + txt[2] + "</H4>";
 
 	var status = "<ul><li><b>Status: </b>" + txt[1] + "</li>"; 
 	var time = "<li><b>Date: </b>" + txt[0] + "</li>";
-	var room = "<li><b>Room:</b>" + txt[6] + "</li>";
-	var who = "<li><b>Who:</b> " + txt[7] + "</li>"; 
+	var room = "<li><b>Room: </b>" + txt[6] + "</li>";
+	var who = "<li><b>Who: </b> " + txt[7] + "</li>"; 
 		
-	var invited = "<li><b>Invited:</b> " + txt[5] + "</li>";
+	var invited = "<li><b>Invited: </b> " + txt[5] + "</li>";
 
-	var description = "<b><li>Description: </b></li><br>" + txt[3];
+	var description = "<li><b>Description: </b></li>" + txt[3];
 
 	valueReturn += 	title + "" +
 					status + "" +
@@ -64,7 +64,7 @@ function htmlReturn(txt) {
 function getValue(event) {
 	if (countCell % 3 == 0) {
   		divEL.innerHTML += "<div class='row'>";
-  		console.log("Start row");
+  		//console.log("Start row");
   	}
 
 	divEL.innerHTML += htmlReturn(event);
@@ -72,11 +72,11 @@ function getValue(event) {
 	if (countCell > 2 && countCell % 3 == 2) {
 		// End Row
 		divEL.innerHTML += "</div>";
-		console.log("End row");
+		//console.log("End row");
 	} else if (countCell == 2) {
 		// End Row
 		divEL.innerHTML += "</div>";
-		console.log("End row");
+		//console.log("End row");
 	}
 }
 
@@ -95,12 +95,13 @@ function readSheet() {
     $.getJSON(url, function(data) {
  
         var entry = data.feed.entry;
-        console.log(entry);
+        //console.log(entry);
 
         for (var i = 3; i < entry.length; i++) {
             
             var dataHolderArray = [];
             var counterArrat = 0;
+            
             var date = entry[i].gsx$day.$t + " " + entry[i].gsx$info.$t;
             dataHolderArray[counterArrat] = date;
             counterArrat++;
@@ -150,7 +151,7 @@ function readSheet() {
                       
             i += 2;
             // i = 10
-            console.log("dHA: " + dataHolderArray)
+            //console.log("dHA: " + dataHolderArray)
             getValue(dataHolderArray);
 
         } // i = 11
