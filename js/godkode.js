@@ -32,7 +32,7 @@ function htmlReturn(txt) {
 	// This is the Div of the coloum.. :)
 	valueReturn += "<div class='col-xs-12 col-sm-6 col-md-4 col-lg-4 borderMeTop'>";
 
-	var title = "<H4>" + txt[2] + "</H4>";
+	var title = "<H4>" + txt   [2] + "</H4>";
 
 	var status = "<ul><li><b>Status: </b>" + txt[1] + "</li>"; 
 	var time = "<li><b>Date: </b>" + txt[0] + "</li>";
@@ -53,8 +53,15 @@ function htmlReturn(txt) {
 	valueReturn += "</ul>";
 	valueReturn += "</div>";
 
+    if(txt[2].length > 0) {
+        valueReturn = valueReturn;
+        countCell++;
+    } else if(txt[2] <= 0) {
+        valueReturn = "";
+    }
+
   	// Html build DONE 
-  	countCell++;
+  	
   	return valueReturn;
 }
 
