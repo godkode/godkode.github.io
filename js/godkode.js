@@ -1,4 +1,15 @@
 var reader; //GLOBAL File Reader object for demo purpose only
+var divEL; // GLOBAL: So i can write to it any where
+// ID of the Google Spreadsheet
+var spreadsheetID = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY";
+// Count a hole event for this function
+var eventCounter = 8; 
+
+function eventProgess() {
+	// event start on 3 and every event takes out 8 spaces
+	console.log(3 + 8 * eventCounter);
+	return (3 + 8 * eventCounter);
+}
 
 /**
  * Check for the various File API support.
@@ -14,7 +25,6 @@ function checkFileAPI() {
 
 }
 
-var divEL; // GLOBAL: So i can write to it any where
 function displayContent() {
     divEL = document.getElementById('contentID');
 
@@ -92,7 +102,7 @@ function getValue(event) {
 function readSheet() {
 	
     // ID of the Google Spreadsheet
-    var spreadsheetID = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY";
+    // var spreadsheetID = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY";
  
     // Make sure it is public or set to Anyone with link can view 
     var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
@@ -104,7 +114,7 @@ function readSheet() {
         var entry = data.feed.entry;
         //console.log(entry);
 
-        for (var i = 11; i < entry.length; i++) {
+        for (var i = eventProgess(); i < entry.length; i++) {
             
             var dataHolderArray = [];
             var counterArrat = 0;
@@ -168,7 +178,6 @@ function readSheet() {
         // display content
         //console.log(dataHolderOfArrays);
     });
-
 }
 
 function isData(cell) {
