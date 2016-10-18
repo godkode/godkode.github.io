@@ -3,11 +3,12 @@ var divEL; // GLOBAL: So i can write to it any where
 // ID of the Google Spreadsheet
 var spreadsheetID = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY";
 // Count a hole event for this function
+// jump over 1 event plus this variable with 1
 var eventCounter = 8; 
 
 function eventProgess() {
 	// event start on 3 and every event takes out 8 spaces
-	console.log(3 + 8 * eventCounter);
+	//console.log(3 + 8 * eventCounter);
 	return (3 + 8 * eventCounter);
 }
 
