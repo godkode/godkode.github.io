@@ -104,7 +104,7 @@ function readSheet() {
         var entry = data.feed.entry;
         //console.log(entry);
 
-        for (var i = 3; i < entry.length; i++) {
+        for (var i = 11; i < entry.length; i++) {
             
             var dataHolderArray = [];
             var counterArrat = 0;
