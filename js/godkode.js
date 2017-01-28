@@ -4,7 +4,7 @@ var divEL; // GLOBAL: So i can write to it any where
 var spreadsheetID = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY";
 // Count a hole event for this function
 // jump over 1 event plus this variable with 1
-var eventCounter = 9; 
+var eventCounter = 0; 
 
 function eventProgess() {
 	// event start on 3 and every event takes out 8 spaces
@@ -108,11 +108,16 @@ function readSheet() {
     // Make sure it is public or set to Anyone with link can view 
     var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
     
+    //console.log(url3);
 	var dataHolderOfArrays = [];
 
     $.getJSON(url, function(data) {
  
+        if(typeof(data) == null) {
+            console.log("Data == null");
+        }
         var entry = data.feed.entry;
+        //console.log("The Entry of the call back by url. FIND sheet former!!!");
         //console.log(entry);
 
         for (var i = eventProgess(); i < entry.length; i++) {
