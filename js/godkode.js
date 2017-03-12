@@ -4,7 +4,7 @@ var divEL; // GLOBAL: So i can write to it any where
 var spreadsheetID = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY";
 // Count a hole event for this function
 // jump over 1 event plus this variable with 1
-var eventCounter = 5; // +1 is a whole week / add +1 to skip a week (from tuesday to tuesday)
+var eventCounter = 6; // +1 is a whole week / add +1 to skip a week (from tuesday to tuesday)
 
 function eventProgess() {
 	// event start on 3 and every event takes out 8 spaces
