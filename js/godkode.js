@@ -1,7 +1,7 @@
 var reader; //GLOBAL File Reader object for demo purpose only
 var divEL; // GLOBAL: So i can write to it any where
 // ID of the Google Spreadsheet
-var spreadsheetID = "1kyftHPSQ6t_YRkTD__kS78QlOPYENnGRRmwx_pGZQpY";
+var spreadsheetID = "14_HLgko6zg7R8CgcD7fZWuSQ5phmVMrjslwNkAhehpY";
 // Count a hole event for this function
 // jump over 1 event plus this variable with 1
 var eventCounter = 0; // +1 is a whole week / add +1 to skip a week (from tuesday to tuesday)
